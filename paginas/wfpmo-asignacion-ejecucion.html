@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1;"/>
+<title>Revisión de documento de Gestión de iniciativas aprobadas por el cliente</title>
+
+<link type="text/css" rel="stylesheet" href="../SiteAssets/css/wfpmo-formulario.css" />
+
+<link type="text/css" rel="stylesheet" href="../SiteAssets/css/jquery-ui.css" />
+<!--<link rel="stylesheet" href="/demos/style.css" />-->
+
+
+<script type="text/javascript" src="../SiteAssets/js/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.js"></script>
+<script type="text/javascript" src="../js/jquery.SPServices-0.7.2.min.js"></script>  
+<script type="text/javascript" src="../js/jquery.SPWidgets.js"></script>
+<script type="text/javascript" src="../js/moment.js"></script>
+<script type="text/javascript" src="/_layouts/sp.init.js"></script>
+<script type="text/javascript" src="/_layouts/1033/init.js"></script>
+<script type="text/javascript" src="/_layouts/MicrosoftAjax.js"></script>
+<script type="text/javascript" src="/_layouts/sp.core.js"></script>
+<script type="text/javascript" src="/_layouts/sp.runtime.js"></script>
+<script type="text/javascript" src="/_layouts/sp.js"></script>
+<script type="text/javascript" src="/_layouts/SP.UI.Dialog.js"></script>
+<script type="text/javascript" src="/_layouts/ScriptResx.ashx?name=sp.res&culture=en-us"></script>
+
+<script type="text/javascript" src="../SiteAssets/js/wfpmo-asignacion-ejecucion.js"></script>
+<script type="text/javascript" src="../SiteAssets/js/moment.js"></script>
+<link  type="text/css" rel="stylesheet" href="/_layouts/1033/styles/Themable/corev4.css" />
+
+
+</head>
+<body>
+  <div style="width:450px; padding-left:30px; ">
+<div style="width:100%;height:15px;border-top:1px #e6e6e6 solid;float:left;">
+<!--<hr style="width:100%;border:1px;border-color:silver;background-color:#e6e6e6;height:0.5px;"/>-->
+</div>
+<div id="cargando" style=" background-color: rgba(128,128,128,0.1); z-index: 9999999; position: fixed; width: 100%; height: 100%; padding: 1px; top:0;left: 0; display:none" >
+		<div style="text-align: center;  margin: auto;  position: absolute;  top: 35%; left: 40%;">
+	 		<img src="../SiteAssets/img/spinner.gif" style="width: 150px"/>
+	 	</div>
+	</div>
+
+
+  <table class="gridtable" >
+  	<tr>
+  		<td style="width:25%;">Responsable</td>
+  		<td><label id="responsableIniciativa"></label></td>
+  	</tr>
+
+  	<tr>
+  		<td style="width:25%;">Nombre</td>
+  		<td><input type="text" id="txtNombre" class="border" style="width:89% !important;padding:6px !important;" disabled="disabled"/></td>
+  	</tr>
+  		<tr>
+  		<td style="width:25%;">Cliente</td>
+  		<td style="width:75%;"><input id="txtCliente" type="text" class="border" style="width:89% !important;padding:6px !important;" disabled="disabled"/><img alt="" src="../SiteAssets/img/libreta.PNG" style="width:6%;vertical-align:top;"/></td>
+  	</tr>
+	<tr>
+  		<td style="width:25%;">Sponsor</td>
+  		<td style="width:75%;"><input id="txtSponsor" type="text" class="border" style="width:89% !important;padding:6px !important;" disabled="disabled"/><img alt="" src="../SiteAssets/img/libreta.PNG" style="width:6%;vertical-align:top;"/></td>
+  	</tr>
+  	<tr>
+  		<td style="width:25%;">División</td>
+  		<!--<td><input id="txttipoOrganizacion" type="text" class="border" style="width:89% !important;padding:6px !important;" disabled="disabled"/></td>-->
+  		<td><label id="txttipoOrganizacion"></label></td>
+  	</tr>
+  	<tr>
+  		<td style="width:25%;">Área Especialista</td>
+  		<td><input id="txtAreaEspecialista" type="text" class="border" style="width:89% !important;padding:6px !important;" disabled="disabled"/></td>
+  		<!--<td><div id="txtOrganizacion"></div></td>-->
+  	</tr>
+  	<tr>
+  		<td style="width:25%;">Negocio Cliente</td>
+  		<td><input id="txtNegocioCliente" type="text" class="border" style="width:89% !important;padding:6px !important;" disabled="disabled"/></td>
+  	</tr>
+  	
+  	<tr>
+  		<td><label id="contineTitulo">Fecha Entrega Estimación</label></td>
+  		<td><input type="text" class="border" id ="fchaEstimacion" style="width: 23%;padding-left: 4px;margin-right: 2px;" disabled="disabled"/><img  style="background-image:url('../SiteAssets/img/calendar.gif'); width:16px;height:15px;vertical-align:top;"></img></td>
+  	</tr>
+  	
+</table>
+</div>
+<br/>
+<div style="width:99%;">
+	<fieldset style="width:95%; margin:6px;">
+		<legend>Costo Total del Proyecto</legend>
+		<table>
+			<tr>
+				<td style="width:25%;">Costos Servicios</td>
+				<td style="width:25%;"><input type="text" id="inputCostosServicios" class="solo-numero" style="width:70% !important; text-align:right" disabled="disabled"/></td>
+				<td style="width:25%;">Costo Logistica</td>
+				<td style="width:25%;"><input type="text" id="inputCostoLogistica" class="solo-numero" style="width:70% !important; text-align:right" disabled="disabled"/></td>
+			</tr>
+			<tr>
+				<td style="width:25%;">Costo Infraestructura</td>
+				<td style="width:25%;"><input type="text" id="inputCostoInfraestructura" class="solo-numero"  style="width:70% !important; text-align:right" disabled="disabled"/></td>
+				<td style="width:25%;">Costo Contingencia</td>
+				<td style="width:25%;"><input type="text" id="inputCostoContingencia" class="solo-numero" style="width:70% !important; text-align:right" disabled="disabled"/></td>
+			</tr>
+			<tr>
+				<td style="width:25%;">Costo Licencias</td>
+				<td style="width:25%;"><input type="text" id="inputCostoLicencias" class="solo-numero" style="width:70% !important; text-align:right" disabled="disabled"/></td>
+				<td style="width:25%;">Otros Costos</td>
+				<td style="width:25%;"><input type="text" id="inputOtrosCostos1" style="width:70% !important; text-align:right" disabled="disabled"/></td>
+			</tr>
+			<tr>
+				<td colspan="4"><div style="text-align:right; margin-right:7%;"><label style="margin-right:8px;">
+					Total</label><input type="text" id="inputTotal" class="solo-numero" style="width:18% !important; margin-right:-2px; text-align:right" disabled="disabled"/></div></td>
+				
+			</tr>
+		</table>
+	</fieldset>
+	<fieldset style="width:95%; margin:6px;">
+		<legend>Costo de Operación</legend>
+		<table>
+			<tr>
+				<td>Costo de Producción</td>
+				<td><input id="inputCostoProduccion" type="text" style="width:43%; text-align:right" disabled="disabled"/></td>
+			</tr>
+			<tr>	
+				<td colspan="1" style="vertical-align:top;">Otros Costos</td>
+				<td colspan="3"><textarea id="inputOtrosCostos" rows="5" style="width:100%;" disabled="disabled"></textarea></td>
+			</tr>
+		</table>
+	</fieldset>
+	<table style="width:95%;margin-left: 11px;margin-top: 8px;margin-bottom: 8px;">
+		<tr>
+			<td style="width:25%;" >Estimación Meses</td>
+			<td style="width:25%;"><input id="inputEstimacionMeses" type="text" style="width:70%; text-align:right" disabled="disabled"/></td>
+			<td style="width:25%;">Fecha Inicio</td>
+			<td style="width:25%;"><input type="text" id="fchainicio" style="width:70%; text-align:right; margin-right:2px;" disabled="disabled"/><img  style="background-image:url('../SiteAssets/img/calendar.gif'); width:16px;height:15px;vertical-align:top;"></img></td>
+		</tr>
+		<tr>
+			<td style="width:25%;" >Área ejecución</td>
+			<td style="width:75%;" colspan="2"><input id="inputAreaEjecucion" type="text" class="border" style="width:80%; text-align:left" disabled="disabled"/> </td>
+		</tr>
+	</table>
+	<table style="width:95%;margin: px;margin-left: 16px;margin-top: 8px;margin-bottom: 8px;">
+		<tr id="tr4">
+	<td style="width:25%;">Revisar Formulario</td>
+		<td style="width:100%;height:10px;" colspan="2">
+			<div>
+				
+				<div id="documentosAnterioresIniciativa" style='display:inline-block;'></div>
+				<div  id="lista_iniciativa" style='display:inline-block;'></div>
+				<div id="documentosAdjuntosIniciativa" style='display:inline-block;'>
+				<!--<input type="file" id="doc0" numero="0" onchange="nuevoInput($(this));" style="display:none"/>	-->
+				</div>
+				<span id="documentosEliminadosIniciativa" style="display:none"></span>
+				<div id="div_iconoAdjuntar"style='display:inline-block;'>
+					<img id="imgClip" style="background-image:url('../SiteAssets/img/clip.png'); width:25px;height:24px;vertical-align: middle;"></img>
+				</div>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>Historial</td>
+		<td><img  style="background-image:url('../SiteAssets/img/historial.png'); width:18px;height:22px;vertical-align: middle;" onclick="VerHistorial();"></img></td>
+	</tr>  
+	</table>
+	
+</div>
+
+<!--<div  style="padding: 15px; width: 450px;margin-left: 15px;text-align:right;margin-top:8px;border-top:1px #dddddd solid;">-->
+<div  style="padding:15px;margin-left: 15px;text-align:center;margin-top:8px;border-top:1px #dddddd solid;">
+		<input class="boton-gris" id="btnFinalizar" type="button"   onclick="Finalizar();" value="Finalizar"/>
+		<input class="boton-gris" id="btnRechazar" 	type="button"   onclick="Rechazar();"  value="Rechazar"/>
+		<input class="boton-gris" id="btnCancelar"  type="button"   onclick="Cerrar();"    value="Cancelar"/>
+</div>
+</body>
+</html>

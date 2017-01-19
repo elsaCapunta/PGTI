@@ -1,0 +1,131 @@
+﻿.contenedor_pdf{
+	margin:0px;
+	padding:0px;
+}
+.hr{
+	width:100%;
+	height:15px;
+	border-top:1px #D4D3D3 solid;
+	float:left;
+}
+.divTituloMinutaIzquierda {
+    text-align: left !important;
+    font-size: 12pt !important;
+    width: 49.5% !important;
+    padding: 5px 5px 5px 1px;
+    vertical-align: bottom;
+    float: left;
+    font-weight: bold;
+}
+.divTituloMinutaDerecha {
+    text-align: right !important;
+    font-size: 12pt !important;
+    width: 200px !important;
+    padding: 5px 0px 5px 1px;
+    vertical-align: bottom;
+    float: right;
+    font-weight: bold;
+}
+.contenedor_pdf .campo{
+	width:24%;
+	display:inline-block;
+}
+.contenedor_pdf .campo .contenido_campo{
+	border:1px solid #D4D3D3;
+	padding:5px;
+}
+.contenedor_pdf .area{
+	width:100%;
+	padding:10px;
+	margin-bottom:20px !important;
+}
+.tabla_top{
+	width:100%;
+	padding:0px !important;
+	margin-bottom:0px !important;
+}
+.tabla_midle{
+	width:100%;
+	padding:0px !important;
+	margin-bottom:0px !important;
+}
+.tabla_bottom{
+	width:100%;
+	padding:0px !important;
+	margin-bottom:0px !important;
+}
+
+
+.contenedor_pdf .txtArea{
+	width:98%;
+	border:1px solid #D4D3D3;
+	padding:10px;
+	min-height:100px;
+	padding-right:13px !important;
+}
+.legend {
+    display: block;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    width: 90px;
+    background-color: white;
+    margin-top:-20px;
+    margin-bottom:20px;
+    border:solid 0px white !import
+}
+.enmarcado{
+	border:2px solid gray;
+	margin-left:10px;
+	width:96% !important;
+}
+.t_numero{
+	text-align:center;
+	width: 3%;
+}
+.t_nombre{
+	text-align:left;
+	width: 31%;
+}
+.t_tipo{
+	text-align:center;
+	width: 10%;
+}
+.t_correo{
+	text-align:left;
+	width: 37%;
+}
+.t_relator{
+	text-align:center;
+	width: 18%;
+}
+th{
+	background-color:#E0E0E0;
+	padding:5px;
+}
+.style1 {
+	text-decoration: underline;
+}
+.t_descripcion{
+	text-align:left;
+	width: 31%;
+}
+.t_responsable{
+	text-align:left;
+	width:37%;
+}
+.t_fechaCompromiso{
+	width:9%;
+}
+.t_estado{
+	width:9%;
+}
+.area1{
+	width:101% !important;
+}
+.titulo{
+	width:98% !important;
+}
+td{
+	    padding: 6px !important;
+}

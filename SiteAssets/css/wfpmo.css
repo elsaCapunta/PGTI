@@ -1,0 +1,169 @@
+﻿
+td{
+	padding:5px 5px !important;
+	/*vertical-align:middle;*/
+	border-bottom:1px #dcdcdc solid;
+	
+	}
+th{
+	padding:5px 5px !important;
+	}
+
+
+.ms-dlgContent
+{
+  position:fixed! important;
+}
+
+
+body
+{
+    font-family:"Century Gothic" !important;
+   
+}	
+	.ms-dlgFrameContainer{
+	overflow:hidden !important;
+}
+
+	Div.ms-titleareaframe {
+	height: 100%;
+	}
+	.ms-pagetitleareaframe table {
+	background: none;
+	
+	}
+	
+		
+	.div100{
+				width:100%;
+				float:left;
+	}
+	.divTituloLogo{
+				width:100%;
+				float:left;
+				height:40px;
+				background-image: url('../img/wfpmo-titulo.png');
+	}
+
+	.divCentroLogosLeft{ 
+
+				
+				width:55%;
+				float:left;
+				height:40px;
+				text-align:center;
+				padding-top:15px;		
+				}
+		.divCentroLogos{
+				border: 1px solid #000;
+				width:33%;
+				float:left;
+				height:40px;
+				border:none;
+				text-align:right;	
+				padding:10px 0px 0px 0px;
+				}
+	.divCentroLogosRight{
+				width:10%;
+				float:left;
+				height:40px;
+		
+				
+				}
+
+	.divBanner{ 
+				border: 1px solid #000;
+				width:98%;
+				float:left;
+				padding-top:0px;
+				text-align:center;
+				background-color:silver;
+				background-image: url('../img/Banner-Codelco.jpg');
+				height:182px;
+				}
+				
+	.divLateralBanner{
+				width:19%;
+				float:left;
+				padding-top:10px;
+				text-align:center;
+				height:160px;
+				padding-top:10px;
+				}
+
+	.divCentro{
+				width:98.3%;
+				float:left;
+				padding-top:3px;
+				text-align:center;
+				padding-bottom:10px;
+				
+				}
+	.divBotonAgregar
+	{
+				width:20%;
+				border:1px silver solid;
+				padding:10px;
+				background-image: url('../img/backgroundbtn.png');
+
+	}
+	.divContenedorBotonAgregar
+	{
+				width:100%;
+				text-align:left;
+	}
+
+	.divMenu{
+				width:30%;
+				height:40px; 
+				float:left;				
+				}
+	
+
+	.divMenuSeparador{
+				width:12%;
+				border:none;
+				height:40px;
+				float:left;
+			}
+	.divMenuSeparadorMReportes{
+				width:0.5%;
+				border:none;
+				/*height:40px;*/
+				float:left;
+			}
+	.divMenuReportes
+	{
+		height:40px;
+		float:left;
+		padding-left:5px;
+	}
+	.botonIr input{
+		
+		background: url("../img/ico-avanzar.png") no-repeat scroll 4px center #005c69;
+	}
+	.botonIr input:hover{
+	
+		background: url("../img/ico-avanzar.png") no-repeat scroll 4px center #004751;
+	}
+.logo-texto{
+	background: url("../img/logo-texto.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 27px;
+    margin: 25px 0 0 33px;
+    width: 135px;
+}
+
+/*
+   #s4-ribbonrow, 
+    .ms-cui-topBar2, 
+   .s4-notdlg, 
+    .s4-pr s4-ribbonrowhidetitle, 
+    .s4-notdlg noindex, 
+   #ms-cui-ribbonTopBars, 
+    #s4-titlerow, 
+   #s4-pr s4-notdlg s4-titlerowhidetitle, 
+    s4-leftpanel-content {display:none !important;}
+
+   .s4-ca{margin-left:0px !important; margin-right:0px !important;}
+*/

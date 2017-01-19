@@ -1,0 +1,89 @@
+﻿#contenedorDescipcion textarea {
+	padding:20px;
+	margin:20px;
+	width:93%;
+	height:60px;
+	margin-top:0px !important;
+
+}
+#contenedorComentario textarea{
+	padding:20px;
+	margin:20px;
+	width:93%;
+	height:60px;
+	margin-top:0px !important;
+	margin-bottom:0px !important;
+}
+#titulo1 h3{
+	padding-left:20px;
+	margin-bottom:5px;
+	margin-top: 20px;
+	padding-bottom:0px;
+}
+#titulo2 h3{
+	padding-left:20px;
+	margin-bottom:5px;
+	margin-top:0px;
+	padding-bottom:0px;
+}
+#datosComentario{
+	padding-left:20px;
+	margin-bottom:5px;
+	margin-top:0px;
+	padding-bottom:0px;
+	font-family: 'lucida_sans_unicoderegular';
+}
+#datosComentario span{
+	font-family: 'lucida_sans_unicoderegular';
+	font-size: 15px;
+}
+#span_idComentario{
+	padding-right:15px;
+}
+.boton-gris {
+    -moz-box-shadow: 0px 1px 0px 0px #23395e;
+    -webkit-box-shadow: 0px 1px 0px 0px #23395e;
+    box-shadow: 0px 1px 0px 0px #23395e;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #2e466e), color-stop(1, #415989));
+    background: -moz-linear-gradient(top, #2e466e 5%, #415989 100%);
+    background: -webkit-linear-gradient(top, #2e466e 5%, #415989 100%);
+    background: -o-linear-gradient(top, #2e466e 5%, #415989 100%);
+    background: -ms-linear-gradient(top, #2e466e 5%, #415989 100%);
+    background: linear-gradient(to bottom, #2e466e 5%, #415989 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2e466e', endColorstr='#415989',GradientType=0);
+    background-color: #2e466e;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #1f2f47;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Verdana;
+    font-size: 12px;
+    padding: 10px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #263666;
+    margin: 2px;
+}
+
+#divBotones{
+	float:right;
+	margin-right:28px;
+}
+
+#tablaComentarios_wrapper{
+	width: 96%;
+    margin: 20px;
+    margin-bottom: 0px !important; 
+}
+#cuerpo{
+	max-height:420px;
+	overflow-y: auto;
+}
+#divBotones{
+	margin-top:20px;
+}
+body{
+	overflow:hidden;
+}

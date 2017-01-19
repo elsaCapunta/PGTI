@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Detalle Iniciativa</title>
+
+<link rel="stylesheet" href="../SiteAssets/css/wfpmo-formulario.css" />
+<link rel="stylesheet" href="../SiteAssets/css/wfpmo-estilo.css" />
+
+<link rel="stylesheet" href="../SiteAssets/css/jquery-ui.css" />
+
+
+<script type="text/javascript" src="../js/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.js"></script>
+<script type="text/javascript" src="../js/jquery.SPServices-0.7.2.min.js"></script>  
+<script type="text/javascript" src="../js/jquery.SPWidgets.js"></script>
+<script type="text/javascript"  src="../js/moment.js"></script>
+<script type="text/javascript" src="/_layouts/sp.init.js"></script>
+<script type="text/javascript" src="/_layouts/1033/init.js"></script>
+<script type="text/javascript" src="/_layouts/MicrosoftAjax.js"></script>
+<script type="text/javascript" src="/_layouts/sp.core.js"></script>
+<script type="text/javascript" src="/_layouts/sp.runtime.js"></script>
+<script type="text/javascript" src="/_layouts/sp.js"></script>
+<script type="text/javascript" src="/_layouts/SP.UI.Dialog.js"></script>
+<script type="text/javascript" src="/_layouts/ScriptResx.ashx?name=sp.res&culture=en-us"></script>
+
+<script type="text/javascript" src="../SiteAssets/js/wfpmo-detalle-iniciativa-reporte.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="/_layouts/1033/styles/Themable/corev4.css" />
+<script type="text/javascript" src="../SiteAssets/js/wfpmo-botones.js"></script>
+<style type="text/css">
+	
+/*.ms-dlgContent
+	{
+	  position:fixed !important; 
+	} */
+	
+ms-dlgOverlay
+{
+position:relative;
+}
+	
+</style>
+
+
+
+</head>
+
+<body>
+	<div id="contenedor" style="width:100%;">
+		<div id="encabezado" style="width:99%;">
+			<fieldset style="width:95%; margin:6px;">
+				<legend>Detalle de la Iniciativa</legend>
+				<table style="width:100%;">
+					<tr>
+						<td style="width:20%;">Correlativo</td>
+						<td style="width:80%;"><label id="txtCorrelativo"></label></td>
+					</tr>
+					<tr>
+						<td style="width:20%;">Reponsable</td>
+						<td style="width:80%;"><label id="txtResponsable"></label></td>
+					</tr>
+					<tr>
+						<td style="width:20%;">Nombre</td>
+						<td style="width:80%;"><label id="txtNombre"></label></td>
+					</tr>
+					<tr>
+						<td style="width:20%;">Cliente</td>
+						<td style="width:80%;"><label id="txtCliente"></label></td>
+					</tr>
+					<tr>
+						<td style="width:20%;">Sponsor</td>
+						<td style="width:80%;"><label id="txtSponsor"></label></td>
+					</tr>
+				</table>
+			</fieldset>
+		</div>
+		<div id="dataTableHistorial" style="width:100%;">
+			<table id="tblHistorial" style="width:95%; margin:6px;">
+				<thead>
+					<tr>
+						<th style='text-align:left;width:7%;vertical-align:middle;background-color:#FAFAFA;'>Estado</th>
+						<th style='text-align:left;width:7%;vertical-align:middle;background-color:#FAFAFA;'>Modificado por</th>
+						<th style='text-align:left;width:7%;vertical-align:middle;background-color:#FAFAFA;'>Comentario</th>
+						<th style='text-align:right;width:7%;vertical-align:middle;background-color:#FAFAFA;'>Días en estado</th>
+						<th style='text-align:right;width:7%;vertical-align:middle;background-color:#FAFAFA;'>Fecha Estado</th>
+					</tr>
+				</thead>
+			</table>
+		</div>
+	<!--	<div  style="padding:25px;text-align:center;margin-top:8px;border-top:1px #dddddd solid;">
+			<input class="boton-gris" id="btnCancelar" type="button"   onclick="Cerrar();" value="Salir"/>
+		</div> -->
+	</div>
+
+</body>
+
+</html>

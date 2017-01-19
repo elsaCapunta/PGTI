@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1;"/>
+<title>Ingreso de Iniciativa</title>
+
+<link rel="stylesheet" href="../SiteAssets/css/wfpmo-formulario.css" />
+
+<link  type="text/css" rel="stylesheet" href="../SiteAssets/css/jquery-ui.css" />
+<!--<link rel="stylesheet" href="/demos/style.css" />-->
+
+
+<script type="text/javascript" src="../js/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.js"></script>
+<script type="text/javascript" src="../js/jquery.SPServices-0.7.2.min.js"></script>  
+<script type="text/javascript" src="../js/jquery.SPWidgets.js"></script>
+<script type="text/javascript"  src="../js/moment.js"></script>
+<script type="text/javascript" src="/_layouts/sp.init.js"></script>
+<script type="text/javascript" src="/_layouts/1033/init.js"></script>
+<script type="text/javascript" src="/_layouts/MicrosoftAjax.js"></script>
+<script type="text/javascript" src="/_layouts/sp.core.js"></script>
+<script type="text/javascript" src="/_layouts/sp.runtime.js"></script>
+<script type="text/javascript" src="/_layouts/sp.js"></script>
+<script type="text/javascript" src="/_layouts/SP.UI.Dialog.js"></script>
+<script type="text/javascript" src="/_layouts/ScriptResx.ashx?name=sp.res&culture=en-us"></script>
+
+<script type="text/javascript" src="../SiteAssets/js/wfpmo-templateId.js"></script>
+<script type="text/javascript" src="../SiteAssets/js/wfpmo-visualiza-incidencia.js"></script>
+<script type="text/javascript" src="../SiteAssets/js/moment.js"></script>
+<link  type="text/css" rel="stylesheet" href="/_layouts/1033/styles/Themable/corev4.css" />
+
+</head>
+<body>
+  <div style="width:450px; padding-left:30px; ">
+<div style="width:100%;height:15px;border-top:1px #e6e6e6 solid;float:left;">
+<!--<hr style="width:100%;border:1px;border-color:silver;background-color:#e6e6e6;height:0.5px;"/>-->
+</div>
+
+<div id="cargando" style=" background-color: rgba(128,128,128,0.1); z-index: 9999999; position: fixed; width: 100%; height: 100%; padding: 1px; top:0;left: 0; display:none" >
+		<div style="text-align: center;  margin: auto;  position: absolute;  top: 35%; left: 40%;">
+	 		<img src="../SiteAssets/img/spinner.gif" style="width: 150px"/>
+	 	</div>
+	</div>
+
+  <table id="tblIngresoIniciativa" class="gridtable" >
+  	<tr>
+  		<td style="width:25%;">Responsable</td>
+  		<td><label id="responsableIniciativa"></label></td>
+  	</tr>
+
+  	<tr>
+  		<td style="width:25%;">Nombre</td>
+  		<td style="width:75%;"><input type="text" id="txtNombre" class="border" style="width:88% !important;padding:6px !important;" disabled="disabled"/></td>
+  	</tr>
+  	<tr>
+  		<td style="width:25%;">Cliente</td>
+  		<td style="width:75%;"><input id="txtCliente" type="text" class="border" style="width:88% !important;padding:6px !important;" disabled="disabled"/><img alt="" src="../SiteAssets/img/libreta.PNG" style="width:7%;vertical-align:top;"/></td>
+  	</tr>
+	<tr>
+  		<td style="width:25%;">Sponsor</td>
+  		<td style="width:75%;"><input id="txtSponsor" type="text" class="border" style="width:88% !important;padding:6px !important;" disabled="disabled"/><img alt="" src="../SiteAssets/img/libreta.PNG" style="width:7%;vertical-align:top;"/></td>
+  	</tr>
+  	<tr>
+  		<td style="width:25%;">División</td>
+  		<!--<td style="width:75%;"><input id="txttipoOrganizacion" type="text" class="border" style="width:88% !important;padding:6px !important;" disabled="disabled"/></td>-->
+  		<td style="width:75%;"><label id="txttipoOrganizacion"></label></td>
+  	</tr>
+  	<tr>
+  		<td style="width:25%;">Negocio Cliente</td>
+  		<td style="width:75%;"><input id="txtNegocioCliente" type="text" class="border" style="width:88% !important;padding:6px !important;" disabled="disabled"/></td>
+  	</tr>
+  	<tr>
+  		<td style="width:25%;"><label id="lblAreaEspecialista">Área Especialista</label></td>
+  		<td><input id="txtAreaEspecialista" type="text" class="border" style="width:88% !important;padding:6px !important;" disabled="disabled"/></td>
+  	</tr>
+  	
+  	<tr>
+  		<td><label id="contineTitulo">Fecha Entrega Estimación</label></td>
+  		<td><input type="text" id ="fchaEstimacion" style="width: 30%;padding-left: 6px;margin-right: 6px;" disabled="disabled"/> </td>
+  		
+  	</tr>
+  	
+	<tr id="tr4">
+	<td style="width:25%;">Revisar Formulario</td>
+		<td style="width:100%;height:10px;" colspan="2">
+			<div>
+				<div id="div_iconoAdjuntar"style='display:inline-block;'>
+					<img  style="background-image:url('../SiteAssets/img/clip.png'); width:25px;height:24px;vertical-align: middle;"></img>
+				</div>
+				<div  id="lista_iniciativa" style='display:inline-block;'></div>
+				<div id="documentosAnterioresIniciativa" style='display:inline-block;'></div>
+				<div id="documentosAdjuntosIniciativa" style='display:inline-block;'>	
+				</div>
+				<span id="documentosEliminadosIniciativa" style="display:none"></span>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>Historial</td>
+		<td><img  style="background-image:url('../SiteAssets/img/historial.png'); width:18px;height:22px;vertical-align: middle;" onclick="VerHistorial();"></img></td>
+	</tr>  		
+</table>
+</div>
+
+<!--<div  style="padding: 15px; width: 450px;margin-left: 15px;text-align:right;margin-top:8px;border-top:1px #dddddd solid;">-->
+<div  style="padding:25px;margin-left: 15px;text-align:center;margin-top:8px;border-top:1px #dddddd solid;">
+		<input class="boton-gris" id="btnAceptar"  type="button"   onclick="Aceptar();" value="Aceptar"/>
+		<input class="boton-gris" id="btnAprobar"  type="button"   onclick="Aprueba();" value="Aprobar"/>  
+		<input class="boton-gris" id="btnCorregir" type="button"   onclick="Corrige();" value="Corregir"/>
+		<input class="boton-gris" id="btnRechazar" type="button"   onclick="Rechaza();" value="Rechazar"/>
+		<input class="boton-gris" id="btnCancelar" type="button"   onclick="Cerrar();" value="Cancelar"/>
+</div>
+
+</body>
+</html>

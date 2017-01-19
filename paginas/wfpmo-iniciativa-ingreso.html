@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1;"/>
+<title>Ingreso de Iniciativa</title>
+
+<link rel="stylesheet" href="../SiteAssets/css/wfpmo-formulario.css" />
+
+<link rel="stylesheet" href="../SiteAssets/css/jquery-ui.css" />
+<!--<link rel="stylesheet" href="/demos/style.css" />-->
+
+
+<script type="text/javascript" src="../SiteAssets/js/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.js"></script>
+<script type="text/javascript" src="../js/jquery.SPServices-0.7.2.min.js"></script>  
+<script type="text/javascript" src="../js/jquery.SPWidgets.js"></script>
+<script type="text/javascript"  src="../js/moment.js"></script>
+<script type="text/javascript" src="/_layouts/sp.init.js"></script>
+<script type="text/javascript" src="/_layouts/1033/init.js"></script>
+<script type="text/javascript" src="/_layouts/MicrosoftAjax.js"></script>
+<script type="text/javascript" src="/_layouts/sp.core.js"></script>
+<script type="text/javascript" src="/_layouts/sp.runtime.js"></script>
+<script type="text/javascript" src="/_layouts/sp.js"></script>
+<script type="text/javascript" src="/_layouts/SP.UI.Dialog.js"></script>
+<script type="text/javascript" src="/_layouts/ScriptResx.ashx?name=sp.res&culture=en-us"></script>
+
+<script type="text/javascript" src="../SiteAssets/js/wfpmo-templateId.js"></script>
+<script type="text/javascript" src="../js/wfpmo-funciones.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/_layouts/1033/styles/Themable/corev4.css" />
+
+<!-- [if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:_dlc_DocId msdt:dt="string">KMPJPZYYTC4J-1100042023-11</mso:_dlc_DocId>
+<mso:_dlc_DocIdItemGuid msdt:dt="string">c83d716c-4537-41cc-8e82-0042265c0c21</mso:_dlc_DocIdItemGuid>
+<mso:_dlc_DocIdUrl msdt:dt="string">http://qashpcorpapp.codelco.cl/sites/PGTI/areas/SSI/catalogo_aplicaciones/RegistroIniciativas/desa/_layouts/DocIdRedir.aspx?ID=KMPJPZYYTC4J-1100042023-11, KMPJPZYYTC4J-1100042023-11</mso:_dlc_DocIdUrl>
+</mso:CustomDocumentProperties>
+</xml><![endif] -->
+<style type="text/css" >
+
+	div.pt-pickSPUser{
+	
+	width:90%;
+	display:inline-block;
+	
+}
+
+</style>
+</head>
+<body>
+
+
+<div style="width:450px; padding-left:30px; ">
+<div style="width:100%;height:15px;border-top:1px #e6e6e6 solid;float:left;">
+<!--<hr style="width:100%;border:1px;border-color:silver;background-color:#e6e6e6;height:0.5px;"/>-->
+</div>
+	
+	<div id="cargando" style=" background-color: rgba(128,128,128,0.1); z-index: 9999999; position: fixed; width: 100%; height: 100%; padding: 1px; top:0;left: 0; display:none" >
+		<div style="text-align: center;  margin: auto;  position: absolute;  top: 35%; left: 40%;">
+	 		<img src="../SiteAssets/img/spinner.gif" style="width: 150px"/>
+	 		<!--<h1>"Espere, esta ventana cerrará automáticamente..."</h1> -->
+	 	</div>
+	</div>
+
+  <table class="gridtable" style="width:99%;">
+  	<tr>
+  		<td style="width:25%;">Nombre</td>
+  		<td style="width:75%;"><input type="text" id="txtNombre" class="border" style="width:85% !important;padding:6px !important;"/><span id="contador1" class="contador">100 Caracteres</span></td>
+  	</tr>
+  	<tr>
+  		<td style="width:25%;">Cliente</td>
+  		<td style="width:75%;"><input id="txtCliente" type="text" class="border"/><img alt="" src="../SiteAssets/img/libreta.PNG" style="width:7%;vertical-align:top;"/></td>
+  	</tr>
+	<tr>
+  		<td style="width:25%;">Sponsor</td>
+  		<td style="width:75%;"><input id="txtSponsor" type="text" class="border" /><img alt="" src="../SiteAssets/img/libreta.PNG" style="width:7%;vertical-align:top;"/></td>
+  	</tr>
+  	<tr>
+  		<td style="width:25%;">Tipo Organización</td>
+  		<td style="width:75%;"><select id="sltTipoOrganizacion" class="border" style="width:89%;" onchange="creaSelectCondicion('sltOrganizacion','{F0E40B09-8427-4458-80C7-44CB4DBA1F28}','ID','Nombre','TipoOrganizacion',this.value);CargaNegocioCliente(this.value);"></select></td>
+  	</tr>
+  	<tr>
+  		<td style="width:25%;">Organización</td>
+  		<td style="width:75%;"><select id="sltOrganizacion" multiple="multiple" class="border" style="width:89%;height:150px;"></select></td>
+  	</tr>
+  	<tr>
+  		<td style="width:25%;">Negocio Cliente</td>
+  		<td style="width:75%;"><select id="sltNegocio" class="border" style="width:89%;"></select></td>
+  	</tr>
+  	
+  	
+	<tr id="tr4">
+		<td style="width:100%;height:10px;" colspan="2">
+			<div>
+				<div id="div_iconoAdjuntar"style='display:inline-block;'>
+					<img id="btnAdjuntarImg" style="background-image:url('../SiteAssets/img/clip.png'); width:25px;height:24px;vertical-align: middle;" onclick="gatillaInputIniciativa()"></img>
+				</div>
+				<div  id="lista_iniciativa" style='display:inline-block;'></div>
+				<div id="documentosAnterioresIniciativa" style='display:inline-block;'></div>
+				<div id="documentosAdjuntosIniciativa" style='display:inline-block;'>
+					<input type="file" id="doc0" numero="0" onchange="nuevoInputIniciativa($(this))" style="display:none"/>
+				</div>
+				<span id="documentosEliminadosIniciativa" style="display:none"></span>
+			</div>
+		</td>
+	</tr> 	
+	
+</table>
+</div>
+
+<div  style="padding: 15px;text-align:center;margin-top:8px;border-top:1px #dddddd solid;">
+		<input class="boton-gris" type="button" id="btnGuardar"  value="Guardar" onclick="Guardar();"/>  
+		<input class="boton-gris" id="btnCancelar" type="button"  value="Salir" onclick="Cerrar();"/>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+function nuevoInputIniciativa(obj){
+	if(obj.val()!=""){
+		var nombre = obj.val().split("\\").pop().split(".")[0];//nombre documento
+    	var myRegEx = new RegExp('[\||\\|/|:|*|?|"|<|>|#|{|}|%|~|&]+'); //expresion regular
+  		if(myRegEx.test(nombre)){
+        	alert("nombre de archivo no puede contener ninguno de los siguientes caracteres: \\ / : * ? \" < > | # { } % ~ &");
+    	}
+    	else{
+	    	if(obj[0].files[0].size>0){
+				var contador =parseInt(obj.attr("numero"));
+				var id=contador+1;
+				var input="<input type='file' id='doc"+id+"' numero='"+id+"' onchange='nuevoInputIniciativa($(this))' style='display:none'/>";
+				$("#documentosAdjuntosIniciativa").append(input);
+		
+				var nombreDoc=obj.val().replace(/.*(\/|\\)/, '');
+				var elemento ="<div style='display:inline-block;' id='lista"+id+"' numero='"+id+"'><span>"+nombreDoc+"</span><img style='background-image:url(\"../SiteAssets/img/btn-cancela.png\"); width:15px;height:15px;vertical-align: middle; ' onclick='eliminarDoc2($(this).parent())'/></img></div>";
+				$("#lista_iniciativa").append(elemento);
+				$("#lista_iniciativa"+id+" img").attr("style",'background-image:url(\'../SiteAssets/img/btn-cancela.png\'); width:15px;height:15px;vertical-align: middle;');
+				$('#btnAdjuntarImg').hide();
+			}
+			else{
+				alert("El documento seleccionado esta vacio");
+			}
+    	}
+	}
+}
+function eliminarDocIniciativa(obj){
+	var url=obj.parent().children("a:first").attr("href");
+	obj.parent().remove();
+	$("#documentosEliminadosIniciativa").text($("#documentosEliminadosIniciativa").text()+";"+url);
+	
+	
+}
+function eliminarDoc2(obj){
+	var numero=obj.attr("numero");
+	obj.remove();
+	$("#documentosAdjuntosIniciativa #doc"+(parseInt(numero)-1)).remove();
+	$('#btnAdjuntarImg').show();
+}
+
+</script>
+</body>
+</html>

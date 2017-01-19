@@ -1,0 +1,1444 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+
+/*RESET*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+/*table, thead, tr, th, td,*/ caption, tbody, tfoot {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: top;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+a {
+	color:#666;
+}
+
+a:hover {
+	color:#666;
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+.clear{
+	clear:both;
+	display: block;
+}
+
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*visibilidad de tablas*/
+table, thead, tr, th, td, caption, tbody, tfoot {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: top;
+	background: transparent;
+}
+
+
+
+/*END RESET*/
+
+/*************Generales****************/
+
+body{
+	font-family:Arial, Helvetica, sans-serif
+}
+
+textarea{
+	resize: none;
+}
+
+
+h1, h2, h3, h4, h5, h6{
+	font-family: 'lucida_sans_unicoderegular';
+	padding-bottom: 15px;
+}
+
+.clear-both{
+	display:block;
+	clear:both;
+}
+.fila{
+	display:block;
+	clear:both;
+	margin:0 0 20px;
+}
+
+@font-face {
+    font-family: 'lucida_sans_unicoderegular';
+    src: url('font/lucida-webfont.eot');
+    src: url('font/lucida-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/lucida-webfont.woff2') format('woff2'),
+         url('font/lucida-webfont.woff') format('woff'),
+         url('font/lucida-webfont.ttf') format('truetype'),
+         url('font/lucida-webfont.svg#lucida_sans_unicoderegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+#wrapper{
+}
+#wrapper #content{
+	display: block;
+    margin: auto;
+    width: 1000px;
+}
+#wrapper #content .header{
+	background: url("images/bg-cabecera.jpg") repeat-x scroll 0 0 transparent;
+    height: 69px;
+}
+#wrapper #content .header .logo-texto{
+}
+#wrapper #content .header .logo-texto{
+	background: url("images/logo-texto.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 27px;
+    margin: 25px 0 0 33px;
+    width: 135px;
+}
+#wrapper #content .header .flecha-calado{
+	background: url("images/flecha-calado.jpg") no-repeat scroll 0 0 transparent;
+	float: left;
+    height: 59px;
+	margin: 9px 0 0 236px;
+    width: 33px;
+}
+#wrapper #content .header .logo-codelco{
+	background: url("images/logo-codelco.png") no-repeat scroll 0 0 transparent;
+    float: right;
+    height: 26px;
+	margin: 25px 53px 0 0;
+    width: 129px;
+}
+
+#wrapper #content .slide{
+    display: block;
+    height: 193px;
+    margin: 0 auto 30px;
+}
+#wrapper #content .content-info{
+}
+#footer{
+	background: none repeat scroll 0 0 #333333;
+    display: block;
+    height: 125px;
+    margin: 54px 0 0;
+    width: 100%;
+    clear: both;
+}
+
+.k-grid-header{
+	padding-right: 0!important;
+}
+
+.tabla-grl table{
+	width: 100%;
+	/*margin-bottom: 40px;*/
+	table-layout: fixed;
+}
+.tabla-grl table td{
+	font-size:11px;
+	font-family:Arial, Helvetica, sans-serif;
+	padding: 6px 4px;
+	background:#fff;
+	border-right: 1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	word-wrap: break-word;
+}
+.tabla-grl table td:first-child{
+	border-left: 1px solid #ccc;
+}
+.tabla-grl table td a.ir{
+	background: url("images/flecha-ir.png") no-repeat scroll center 0 transparent;
+    display: block;
+    font-size: 0;
+    height: 14px;
+    line-height: 0;
+    text-indent: -99999px;
+    width: 16px;
+}
+.tabla-grl table td a.semaforo{
+	display: block;
+    font-size: 0;
+    height: 20px;
+    line-height: 0;
+    margin: auto;
+    text-indent: -99999px;
+    width: 20px;
+}
+.tabla-grl table td a.semaforo.rojo{
+	background: url("images/semaforo-rojo.png") no-repeat scroll 0 0 transparent;
+}
+.tabla-grl table td a.semaforo.naranjo{
+	background: url("images/semaforo-naranjo.png") no-repeat scroll 0 0 transparent;
+}
+.tabla-grl table td a.semaforo.verde{
+	background: url("images/semaforo-verde.png") no-repeat scroll 0 0 transparent;
+}
+.tabla-grl table td th{
+}
+.tabla-grl table tr.fila-gris td{
+	background:#EEEEEE;
+}
+.tabla-grl.tabla-gris table tr th{
+	 background: none repeat scroll 0 0 #333333;
+    color: #fff;
+    font-family: "lucida_sans_unicoderegular";
+    font-size: 11px;
+    font-weight: normal;
+    padding: 6px 14px;
+    text-align: left;
+}
+.tabla-grl.tabla-naranja table tr th{
+	background: none repeat scroll 0 0 #ff7e19 !important;
+    color: #fff;
+    font-family: "lucida_sans_unicoderegular";
+    font-size: 10px;
+    font-weight: normal;
+    padding: 6px 4px;
+    text-align: left;
+    border: 1px solid #FFAD6A;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.tabla-Informativa{
+	background: none repeat scroll 0 0 #ff7e19 !important;
+    color: #fff;
+    font-family: "lucida_sans_unicoderegular";
+    font-size: 15px!important;
+    font-weight: normal;
+    padding: 6px 4px;
+    text-align: left;
+    border: 1px solid #FFAD6A;
+    text-align: center;
+    vertical-align: middle;
+}
+
+	.tabla-grl.tabla-naranja table tr th:last-child{
+		border-right: 0;
+}
+
+.k-grid-edit-row .k-input.k-textbox{
+	width: 98%;
+}
+
+.k-formatted-value.k-input,
+.k-numerictextbox input
+{
+	width: 90%;
+}
+
+.k-grid-edit{
+	background: url("../img/btn-editar.png") no-repeat 0 0;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	text-indent: -9999px;
+	margin-right: 5px;
+}
+
+.k-grid-delete{
+	background: url("../images/btn-borrar.png") no-repeat 0 0;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	text-indent: -9999px;
+}
+
+.k-grid-update{
+	background: url("../images/btn-save.png") no-repeat 0 0;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	text-indent: -9999px;
+	margin-right: 5px;
+}
+
+.k-grid-cancel{
+	background: url("../images/btn-cancelar.png") no-repeat 0 0;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	text-indent: -9999px;
+}
+
+.k-grid-add{
+	background: url("../img/btn-agregar.png") no-repeat right 0;
+	/*width: 35px;*/
+	width:0px;
+	height: 15px;
+	display: inline-block;
+	color: #666!important;
+	padding-right: 20px;
+	/*margin-top: 20px;*/
+	margin-bottom: 10px;
+	display: block;
+}
+
+	.k-grid-add span{
+		color: #666!important;
+}
+
+.th_Vencimientos,
+.th_MonedaDoc,
+.th_MonedaLocal,
+.th_MontoAcree,
+.th_MontoDeudor,
+.th_Cantidad,
+.th_US,
+.th_Propiedad
+{
+	background: #EC6A00!important;
+}
+
+.th_Titulo{
+	text-align: center!important;
+	font-weight: bold!important;
+}
+
+
+
+
+/*Portada
+******************/
+
+#wrapper #content .content-info h2{
+	color: #b64f00;
+    font-size: 22px;
+	font-weight: normal;
+}
+.tabs-pendientes{
+}
+.tabs-pendientes ul{
+	display: block;
+    height: 61px;
+	 margin-bottom: -6px;
+}
+.tabs-pendientes ul li{
+	display:block;
+	float:left;
+}
+.tabs-pendientes ul li a{
+	background: none repeat scroll 0 0 #cccccc;
+    color: #000;
+    display: block;
+    float: left;
+    font-size: 12px;
+    height: 35px;
+    margin-right: 9px;
+    padding: 10px 5px;
+    text-align: center;
+	text-decoration: none;
+    width: 92px;
+}
+.tabs-pendientes ul li a span{
+	display: block;
+    padding: 3px;
+}
+.tabs-pendientes ul li.current a{
+	background: url("images/tabs-on-naranja.jpg") no-repeat scroll 0 0 transparent;
+    color: #fff;
+    font-family: "lucida_sans_unicoderegular";
+    font-weight: bold;
+    height: 41px;
+    position: relative;
+    z-index: 10;
+}
+.tabs-pendientes .int-pendientes{
+	background: none repeat scroll 0 0 #f7f7f7;
+    display: block;
+    padding: 28px;
+}
+
+.tabs-pendientes .porcentaje-cumplimiento{
+	background: url("images/bg.porcentaje-cumplimiento.jpg") repeat scroll 0 0 transparent;
+    display: block;
+    float: left;
+    height: 239px;
+    margin: 0 32px 0 0;
+    width: 271px;
+}
+
+.tabs-pendientes .tabla-grl.tabla-naranja{
+}
+.tabs-pendientes .tabla-grl.tabla-naranja table{
+	width: 640px;
+}
+.tabs-pendientes .tabla-grl.tabla-naranja table tr th{
+	background: none repeat scroll 0 0 #ff7e19;
+	 color: #fff;
+    font-family: "lucida_sans_unicoderegular";
+    font-size: 11px;
+    font-weight: normal;
+    padding: 6px 14px;
+    text-align: left;
+}
+
+
+/*Analisis
+******************/
+
+.analisis-int{
+}
+.analisis-int .mensaje{
+	background: url("images/bg-mensaje-analisis.png") no-repeat scroll 0 0 transparent;
+    color: #fff;
+    font-family: lucida_sans_unicoderegular;
+    font-size: 14px;
+    height: 46px;
+    margin: 0 auto -22px;
+    padding: 14px;
+    position: relative;
+    width: 455px;
+    z-index: 10;
+}
+.analisis-int .caja-analisis{
+	background: none repeat scroll 0 0 #eeeeee;
+    display: block;
+    padding: 40px 20px 20px;
+    width: 960px;
+}
+.analisis-int .caja-analisis .seleccion{
+	background: url("images/bg-select-analisis.png") no-repeat scroll 0 0 #fff;
+	float: left;
+    height: 34px;
+    margin: 0 12px 20px;
+    overflow: hidden;
+    width: 296px;
+}
+.analisis-int .caja-analisis .seleccion select{
+	background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    display: block;
+    font-size: 14px;
+    height: 34px;
+    line-height: 1;
+    padding: 8px 5px;
+    padding-right: 0px;
+    width: 293px;
+}
+
+/*.ui-select{width: 100%}
+/* This is to remove the arrow of select element in IE */
+/*select::-ms-expand {	display: none; }
+select{
+    -webkit-appearance: none;
+    appearance: none;
+}
+@-moz-document url-prefix(){
+	.ui-select{border: 1px solid #CCC; border-radius: 4px; box-sizing: border-box; position: relative; overflow: hidden;}
+  .ui-select select { width: 110%; background-position: right 30px center !important; border: none !important;}
+}
+
+*/
+.analisis-int .btn-analisis{
+}
+.analisis-int .btn-analisis a{
+	 background: url("images/icot-analisis.png") no-repeat scroll 8px center #005c69;
+    color: #fff!important;
+    text-transform: uppercase; 
+    display: block;
+    float: right;
+    font-family: lucida_sans_unicoderegular;
+    font-size: 14px;
+    height: 36px;
+    margin: 20px 0 0;
+    padding: 25px 10px 0 57px;
+    text-decoration: none;
+    width: 130px;
+}
+.analisis-int .btn-analisis a:hover{
+	background: url("images/icot-analisis.png") no-repeat scroll 8px center #00454F;
+}
+
+
+/*Reportes
+******************/
+
+.caja-reportes{
+	background: none repeat scroll 0 0 #eeeeee;
+    display: block;
+    height: 67px;
+    padding: 10px 20px;
+    width: 960px;
+	margin: 0 0 32px;
+}
+.caja-reportes .seleccion.division{
+	background: url("images/bg-select-analisis.png") no-repeat scroll 0 0 #fff;
+    float: left;
+    height: 34px;
+    margin: 18px 12px 0 0;
+    overflow: hidden;
+    width: 296px;
+}
+.caja-reportes .seleccion.division select{
+	background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    display: block;
+    font-size: 14px;
+    height: 34px;
+    line-height: 1;
+    padding: 8px 5px;
+    width: 324px;
+}
+.caja-reportes .mes, .caja-reportes .ano{
+	background: url("images/bg-select-reporte-mes.jpg") no-repeat scroll 0 0 #fff;
+    float: left;
+    height: 34px;
+    margin: 18px 12px 0;
+    overflow: hidden;
+    width: 139px;
+}
+.caja-reportes .mes select, .caja-reportes .ano select{
+	background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    display: block;
+    font-size: 14px;
+    height: 34px;
+    line-height: 1;
+    padding: 8px 5px;
+    width: 174px;
+}
+.caja-reportes .btn-analisis{
+	display: block;
+    float: left;
+    margin: 0 16px 0 34px;
+}
+.caja-reportes .btn-analisis a {
+    background: url("images/icot-analisis.png") no-repeat scroll 8px center #005c69;
+    border: 1px solid #fff;
+    color: #fff;
+    display: block;
+    float: left;
+    font-family: lucida_sans_unicoderegular;
+    font-size: 14px;
+    height: 38px;
+    margin: 0;
+    padding: 28px 10px 0 57px;
+    text-decoration: none;
+    width: 130px;
+}
+.caja-reportes .btn-analisis a:hover {
+	background: url("images/icot-analisis.png") no-repeat scroll 8px center #00454F;
+}
+.caja-reportes .btn-pdf{
+    display: block;
+    float: left;
+    height: 68px;
+    width: 76px;
+}
+.caja-reportes .btn-pdf a{
+	background: url("images/btn-grar-pdf.png") no-repeat scroll center 12px #f4f4f4;
+	display: block;
+    font-family: "lucida_sans_unicoderegular";
+    font-size: 13px;
+    height: 20px;
+    padding-top: 48px;
+    text-align: center;
+    text-decoration: none;
+    width: 76px;
+}
+.caja-reportes .btn-pdf a:hover{
+	background: url("images/btn-grar-pdf.png") no-repeat scroll center 12px #D9D9D9;
+}
+.tabla-reportes h2{
+	float: left;
+    margin: 22px 0 0;
+    width: 850px;
+}
+.tabla-reportes .criterio-colores{
+	background: url("images/bg-criterio-colores.jpg") no-repeat scroll 0 0 transparent;
+    display: block;
+    float: left;
+    height: 63px;
+    width: 149px;
+}
+.table-reportes{
+	clear: both;
+    display: block;
+    float: none;
+    padding: 10px 0 0;
+}
+.table-reportes.tabla-grl.tabla-gris table tr th{
+	font-size: 12px;
+    line-height: 120%;
+}
+.table-reportes table td.total{
+	font-weight:bold;
+}
+.table-reportes td .porcentaje{
+	display: inline;
+    float: left;
+    padding: 5px;
+}
+.table-reportes td .circulo-verde{
+	background: url("images/semaforo-verde.png") no-repeat scroll 0 0 transparent;
+    display: inline;
+    float: left;
+    height: 20px;
+    width: 20px;
+}
+.table-reportes td .circulo-naranjo{
+	background: url("images/semaforo-naranjo.png") no-repeat scroll 0 0 transparent;
+    display: inline;
+    float: left;
+    height: 20px;
+    width: 20px;
+}
+.table-reportes td .circulo-rojo{
+	background: url("images/semaforo-rojo.png") no-repeat scroll 0 0 transparent;
+    display: inline;
+    float: left;
+    height: 20px;
+    width: 20px;
+}
+
+
+/*Biblioteca
+*******************/
+
+.analisis-form .analisis-int .caja-analisis{
+	background:#F7F7F7;
+}
+.analisis-form .fila.uno{
+}
+.analisis-form .fila.uno .info-analisis{
+	display:block;
+	float:left;
+}
+.analisis-form .fila.uno .info-analisis table{
+}
+.analisis-form .fila.uno .info-analisis table tr td{
+	font-size: 13px;
+    padding: 5px 12px 5px 0;
+}
+.analisis-form .fila.uno .info-analisis table tr td:first-child{
+	font-weight:bold;
+}
+.analisis-form .fila.uno .logo{
+	 background: none repeat scroll 0 0 #fff;
+    border: 1px solid #cccccc;
+    display: block;
+    float: right;
+    height: 90px;
+    width: 161px;
+}
+.analisis-form .fila.uno .logo.ventanas{
+	/*background: url("images/logo-codelco-ventanas.jpg") repeat scroll 0 0 #fff;*/
+}
+
+.analisis-form .fila.dos .fecha-mes{
+	background: none repeat scroll 0 0 #333333;
+    color: #fff;
+    float: left;
+    font-family: lucida_sans_unicoderegular;
+    font-size: 25px;
+    height: 59px;
+    margin: 0 25px 0 0;
+    padding-top: 35px;
+    text-align: center;
+    width: 264px;
+}
+.analisis-form .fila.dos .saldo-acomulado{
+}
+.analisis-form .fila.dos .saldo-acomulado table{
+	border: 1px solid #ccc;
+    font-family: lucida_sans_unicoderegular;
+    width: 614px;
+    float:right
+}
+.analisis-form .fila.dos .saldo-acomulado table tr th{
+	background: none repeat scroll 0 0 #333;
+    color: #fff;
+    font-size: 13px;
+    padding: 10px;
+	font-weight: normal;
+}
+.analisis-form .fila.dos .saldo-acomulado table tr td{
+	font-family: lucida_sans_unicoderegular;
+    font-size: 13px;
+    padding: 9px;
+    text-align:right;
+}
+
+.analisis-form .fila.dos .saldo-acomulado table tr td span{
+	font-weight:bold;
+}
+
+.analisis-form .fila.tres{
+}
+.analisis-form .fila.cuatro .adjuntos-btn{
+	float: left;
+    width: 320px;
+}
+.analisis-form .fila.cuatro .adjuntos-btn h3{
+	color: #333333;
+    font-size: 15px;
+}
+.analisis-form .fila.cuatro .adjuntos-btn .examinar-btn{
+height: 45px;
+width: 288px;
+margin-bottom: 10px;
+background: #EEE none repeat scroll 0% 0%;
+padding: 8px;
+display: block;
+}
+
+.containet :invalid + span {
+    color: #A44;
+}
+.containet :valid + span {
+    color: #4A4;
+}
+.analisis-form .fila.cuatro .adjuntos-btn .examinar-btn input{
+    position: fixed;
+    top: -1000px;}
+
+.analisis-form .fila.cuatro .adjuntos-btn .examinar-btn .container
+{
+    background-color: #eee;
+    border: 1px solid #cccccc;    
+    left: 10px;
+    padding: 10px;    
+    text-align: center;
+    vertical-align: middle;
+    width: 60px;
+    display: inline-block;
+    cursor:pointer;
+    margin: 5px;
+   }
+.analisis-form .fila.cuatro .adjuntos-btn .examinar-btn .container:hover{
+    background-color:#d6d6d6;
+  
+}
+
+.analisis-form .fila.cuatro .adjuntos-btn .examinar-btn .document{
+	float: right;
+	padding-top: 20px;
+	padding-right: 10px;
+	width: 180px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+  }
+.analisis-form .fila.cuatro .adjuntos-btn .examinar-btn .examinar{
+   
+}
+
+
+
+.analisis-form .fila.cuatro .adjuntos-btn .examinar-btn a
+{
+	background: none repeat scroll 0 0 #005c69;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-family: lucida_sans_unicoderegular;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 0 0 10px;
+    padding: 10px 8px;
+    text-align: center;
+    width: 124px;
+}
+
+.analisis-form .fila.cuatro .adjuntos-btn .examinar-btn a:hover{
+	background:#004751;
+}
+
+
+.analisis-form .fila.cuatro .adjuntos-btn .examinar-btn input
+{
+/*	padding: 10px;
+	background: #eee;
+	margin: 0 0 8px 0;
+	display: block;*/
+	
+}
+
+.analisis-form .fila.cuatro .observaciones-envio{
+	float: right;
+	width: 638px;
+}
+.analisis-form .fila.cuatro .observaciones-envio h3{
+}
+.analisis-form .fila.cuatro .observaciones-envio .text-area-obs{
+	margin: 0 0 16px;
+}
+.analisis-form .fila.cuatro .observaciones-envio .text-area-obs textarea{
+	border: 1px solid #ccc;
+    height: 124px;
+    padding: 10px;
+    width: 614px;
+} 
+
+.input-wrapper{
+	text-align: right;
+	letter-spacing: -3px;
+}
+
+.input-obs-Guardar,
+.input-obs-Avanzar,
+.input-obs-rechazar,
+.input-obs-aprobar
+{
+	display: inline-block;
+	vertical-align: top;
+}
+
+
+.analisis-form .fila.cuatro .observaciones-envio .input-obs-rechazar input, 
+.analisis-form .fila.cuatro .observaciones-envio .input-obs-aprobar input,
+.analisis-form .fila.cuatro .observaciones-envio .input-obs-Guardar input,
+.analisis-form .fila.cuatro .observaciones-envio .input-obs-Avanzar input
+
+{
+	border: 0 none;
+    color: #fff;
+
+    font-family: lucida_sans_unicoderegular;
+    font-size: 15px;
+    height: 68px;
+    padding: 0 0 0 30px;
+    text-transform: uppercase;
+    width: 189px;
+	cursor:pointer;
+}
+.analisis-form .fila.cuatro .observaciones-envio .input-obs-rechazar input{
+	background: url("images/ico-rechazar.png") no-repeat scroll 20px center #CC0000;
+	margin-right: 18px;
+}
+.analisis-form .fila.cuatro .observaciones-envio .input-obs-rechazar input:hover{
+	background: url("images/ico-rechazar.png") no-repeat scroll 20px center #AE0000;
+}
+
+
+.analisis-form .fila.cuatro .observaciones-envio .input-obs-aprobar input{
+	background: url("images/ico-aprobar.png") no-repeat scroll 20px center #005c69;
+}
+.analisis-form .fila.cuatro .observaciones-envio .input-obs-aprobar input:hover{
+	background: url("images/ico-aprobar.png") no-repeat scroll 20px center #004751;
+	
+}
+
+.analisis-form .fila.cuatro .observaciones-envio .input-obs-Guardar input{
+	background: url("images/ico-guardar.png") no-repeat scroll 20px center #ff7e19;
+	margin-right: 18px;
+}
+.analisis-form .fila.cuatro .observaciones-envio .input-obs-Guardar input:hover{
+	background: url("images/ico-guardar.png") no-repeat scroll 20px center #e86800;
+}
+
+.analisis-form .fila.cuatro .observaciones-envio .input-obs-Avanzar input{
+	background: url("img/ico-avanzar.png") no-repeat scroll 4px center #005c69;
+	
+}
+.analisis-form .fila.cuatro .observaciones-envio .input-obs-Avanzar input:hover{
+	background: url("img/ico-avanzar.png") no-repeat scroll 4px center #004751;
+}
+
+
+.analisis-form .fila.cinco{
+}
+.analisis-form .fila.cinco .tabla-info{
+}
+.analisis-form .fila.cinco .tabla-info table{
+}
+.analisis-form .fila.cinco .tabla-info table tr td{
+	background: none repeat scroll 0 0 #ebebeb;
+    border-top: 1px solid #fff;
+    color: #333;
+    font-family: lucida_sans_unicoderegular;
+    font-size: 13px;
+    padding: 7px;
+}
+.analisis-form .fila.cinco .tabla-info table tr td:first-child{
+	border-top:1px solid #f7f7f7;
+}
+.analisis-form .fila.cinco .tabla-info table tr td span{
+	font-weight:bold;
+}
+
+.kwicks {
+	/* recommended styles for kwicks ul container */
+	list-style: none;
+	position: relative;
+	margin: 0;
+	padding: 0;
+;
+}
+.kwicks li{
+	/* these are required, but the values are up to you (must be pixel) */
+	width: 198px;
+	height: 193px;
+
+	/*do not change these */
+	display: block;
+	overflow: hidden;
+	padding: 0;  /* if you need padding, do so with an inner div (or implement your own box-model hack) */
+}
+.kwicks.horizontal li {
+	/* This is optional and will be disregarded by the script.  However, it should be provided for non-JS enabled browsers. */
+	margin-right: 5px; /*Set to same as spacing option. */	
+	float: left;
+	cursor:pointer;
+}
+.kwicks.vertical  li{
+	/* This is optional and will be disregarded by the script.  However, it should be provided for non-JS enabled browsers. */
+	margin-bottom: 5px; /*Set to same as spacing option. */	
+}
+
+#kwick_3 {
+  background: url("../images/reportes.jpg");
+}
+#kwick_1 {
+  background: url("../images/mis-pendientes.jpg");
+}
+#kwick_2 {
+  background: url("../images/iniciar-analisis.jpg");
+}
+#kwick_4 {
+  background: url("../images/biblioteca-contables.jpg");
+}
+#kwick_5 {
+  background: url("../images/historico.jpg");
+}
+
+#adjuntosfile {
+ background: beige;
+  width: 304px;
+  min-height: 50px;	
+}
+
+#adjuntosfile ul li{
+	padding: 10px;
+}
+
+
+#adjuntosfile ul li a{
+	display: inline-block;
+	padding-right: 10px;
+	width: 174px;
+	
+	color: #666;
+}
+
+#adjuntosfile ul li a:hover{
+text-decoration: underline;	
+}
+
+
+#adjuntosfile ul li input{
+	background: #A00808;
+  color: #fff;
+  border: none;
+  font-size: 11px;
+  padding: 5px;
+}
+
+td.numbers {
+  text-align: right;
+}
+
+span.numbers {
+  float: right;
+  text-align: right;
+}
+
+.k-grid-footer {
+  padding-right: 0px!important;
+}
+
+.k-select{
+	display:none;
+}
+
+
+/**TABS**/
+#tabs ul li{
+	display: inline-block;
+
+	
+	background: #e4e4e4;
+}
+
+
+	#tabs ul li.ui-tabs-active{
+	background: #ff7e19;
+}
+
+	#tabs ul li a{
+	padding: 10px 18px;
+	height: 30px;
+	display: block;
+	color: #666;
+	text-align: center;
+}
+
+		#tabs ul li.ui-tabs-active a{
+		color: #fff;
+}
+
+
+.grafico1{
+	width: 50%;
+	float: left;
+	height: 400px\9;
+}
+
+.grafico2{
+	width: 50%;
+	visibility: hidden;
+}
+
+
+
+/**REPORTES**/
+#gridkpiwrapper{
+	height: auto;
+}
+
+
+.reportekpi{
+	background: #eee;
+	padding: 20px;
+	overflow: hidden;
+}
+
+.reportedivision{
+	float: left;
+	  background: url("images/bg-select-analisis.png") no-repeat scroll 0 0 #fff;
+  float: left;
+  height: 34px;
+  margin: 14px 12px 20px;
+  overflow: hidden;
+  width: 296px;
+}
+
+.reportedivision select{
+background: none repeat scroll 0 0 transparent;
+  border: 0 none;
+  display: block;
+  font-size: 14px;
+  height: 34px;
+  line-height: 1;
+  padding: 8px 5px;
+  padding-right: 56px;
+  width: 324px;
+  }
+  
+.reporteperiodo{
+		float: left;
+	  background: url("images/bg-select-analisis.png") no-repeat scroll 0 0 #fff;
+  float: left;
+  height: 34px;
+  margin: 14px 12px 20px;
+  overflow: hidden;
+  width: 296px;
+
+}
+
+.reporteperiodo select{
+background: none repeat scroll 0 0 transparent;
+  border: 0 none;
+  display: block;
+  font-size: 14px;
+  height: 34px;
+  line-height: 1;
+  padding: 8px 5px;
+  padding-right: 56px;
+  width: 324px;
+}
+
+.btn-reporte{
+
+}
+
+.btn-reporte .btnreporte {
+  background: url("images/icot-analisis.png") no-repeat scroll 8px center #005c69;
+  color: #fff!important;
+  text-transform: uppercase;
+  display: block;
+  float: left;
+  font-family: lucida_sans_unicoderegular;
+  font-size: 14px;
+  height: 36px;
+  /*margin: 20px 0 0;*/
+  padding: 25px 10px 0 57px;
+  text-decoration: none;
+  width: 130px;
+}
+
+.btn-reporte .btnpdf{
+	background: url("../images/ico-pdf.png") no-repeat 50% 10px #f4f4f4;
+	float: right;
+	display: block;
+	width: 76px;
+	height: 22px;
+	padding-top: 40px;
+	text-align: center;
+	font-size: 10px;
+	color: #666!important;
+
+}
+
+#gridleyenda {
+  background: #eee;
+  width: 150px;
+  float: right;
+  margin: 20px 0 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+	#gridleyenda .sem{
+	width: 50px;
+	display: inline-block;
+	font-size: 9px;
+}
+
+	#gridleyenda h5{
+		font-size: 12px;
+}
+
+#gridleyenda .sem .semaforoverde {
+  background: url("../images/s-verde.png") no-repeat;
+  width: 21px;
+  height: 20px;
+  display: block;
+  margin: 5px auto;
+}
+
+#gridleyenda .sem .semafororojo {
+  background: url("../images/s-rojo.png") no-repeat;
+  width: 21px;
+  height: 20px;
+  display: block;
+  margin: 5px auto;
+}
+
+
+#gridleyenda .sem .semaforoamarillo {
+  background: url("../images/s-amarillo.png") no-repeat;
+  width: 21px;
+  height: 20px;
+  display: block;
+  margin: 5px auto;
+}
+
+#gridkpiwrapper h4{
+	float: left;
+	color: #b64f00;
+  font-size: 22px;
+  font-weight: normal;
+
+  margin-top: 50px;
+}
+
+
+
+#gridkpi{
+	  clear: both;
+  height: auto;
+}
+
+#gridkpi.tabla-grl.tabla-naranja table tr th{
+	background: #333!important;
+	  border-right: 1px solid #666;
+}
+
+#gridkpi .k-alt td{
+	background: #eee;
+}
+
+#gridkpi span.numbers{
+	float: left;
+  display: block;
+  text-align: right;
+  width: 40px;
+  padding-top: 5px;
+  }
+  
+ #gridkpi span.numbers:after {
+   content:  "% ";
+}
+
+
+
+.circulo {
+	display: block;
+	width: 40px;
+	height: 20px;
+	float: right;
+}
+
+.semaforoverde{
+	background: url("../images/s-verde.png") no-repeat;
+
+}
+
+.semafororojo{
+	background: url("../images/s-rojo.png") no-repeat;
+
+}
+
+.semaforoamarillo{
+	background: url("../images/s-amarillo.png") no-repeat;
+
+}
+
+.GrillaFormularios{
+	page-break-inside:avoid;
+}
+
+
+body #s4-workspace {
+   overflow-y: scroll;
+   overflow-x: hidden;
+   height:inherit!important;
+}
+
+
+/* Grid :: paging */
+
+.k-pager-wrap
+{
+    overflow: auto;
+    border-style: solid;
+    border-width: 1px;
+    line-height: 24px;
+    padding:4px 0 4px 3px;
+}
+
+.k-grid-pager
+{
+    border-width: 1px 0 0;
+}
+
+.k-grid .k-pager-numbers,
+.k-pager-numbers .k-link,
+.k-pager-numbers .k-state-selected
+{
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 1px;
+}
+
+.k-pager-numbers
+{
+    margin:0 2px;
+}
+
+.k-pager-numbers .k-state-selected
+{
+    vertical-align:top;
+}
+
+.k-pager-numbers li,
+.k-pager-input
+{
+    float:left;
+    background: none!important;
+}
+
+.k-grid .k-pager-numbers
+{
+    float: left;
+    cursor: default;
+}
+
+.k-pager-info
+{
+    float: right;
+    padding:0 16px;
+    display: none;
+}
+
+.k-pager-numbers .k-link
+{
+    text-decoration: none;
+}
+
+.k-pager-wrap>.k-link
+{
+    float:left;
+    margin:0 1px;
+    padding: 0 3px;
+    height: 22px;/*IE7*/
+    line-height: 22px;/*IE7*/
+    border-radius:13px;
+    cursor:pointer;
+}
+
+.k-pager-wrap>a.k-state-disabled:hover
+{
+    background:none;
+    cursor:default;
+}
+
+.k-pager-wrap>.k-link .k-icon
+{
+    vertical-align:top;
+    margin-top:3px;
+}
+
+.k-pager-numbers .k-link
+{
+    padding: 0 8px!important;
+    height: auto!important;
+}
+
+.k-pager-numbers .k-link:hover
+{
+    /*padding: 0 7px;
+    border-style:solid;
+    border-width:1px;
+    line-height:22px;*/
+    background: #666;
+    color: #fff;
+}
+
+.k-pager-wrap>.k-link
+{
+    /*border-style:solid;
+    border-width:1px;*/
+}
+
+.k-pager-wrap .k-pager-refresh
+{
+    float:right;
+    margin-right:6px;
+    border-width:0;
+    border-radius:0;
+}
+
+.k-pager-numbers .k-state-selected
+{
+   /* border-style:solid;
+    border-width:1px;
+    line-height:22px;*/
+    padding:0 7px;
+  /*  border-radius:13px;*/
+    background: #ff7e19;
+    color: #fff;
+}
+
+.k-pager-wrap .k-textbox
+{
+    width:40px;
+}
+
+.k-ie7 .k-pager-wrap .k-textbox
+{
+    height:16px;
+    margin-top:2px;
+    display:inline;
+}
+
+.k-pager-wrap .k-dropdown
+{
+    width:54px;
+}
+
+.k-pager-refresh
+{
+    float:right;
+}
+
+.k-pager-input,
+.k-pager-sizes
+{
+    padding:0 17px;
+}
+
+.k-ie7 .k-pager-sizes
+{
+    float:left;
+}
+
+.k-pager-wrap .k-textbox,
+.k-pager-wrap .k-widget
+{
+    margin:-.3em .4em 0;
+}
+
+.k-pager-first{
+	background: url("images/ico-first.jpg") no-repeat scroll 0 2px #fff!important;
+	width: 18px;
+	text-indent: -9999px;
+	cursor: pointer;
+	}
+	
+.k-pager-last{
+	background: url("images/ico-last.jpg") no-repeat scroll right 2px #fff!important;
+	width: 18px;
+	text-indent: -9999px;
+	cursor: pointer;
+	}
+
+.k-pager-nav .k-i-arrow-w{
+	background: url("images/ico-prev.jpg") no-repeat scroll 0 2px #fff!important;
+	width: 18px;
+	text-indent: -9999px;
+	margin: 0!important;
+  display: block;
+	}
+	
+	.k-pager-nav .k-i-arrow-e{
+	background: url("images/ico-next.jpg") no-repeat scroll right 2px #fff!important;
+	width: 18px;
+	text-indent: -9999px;
+	margin: 0!important;
+  display: block;
+	}
+
+
+
+

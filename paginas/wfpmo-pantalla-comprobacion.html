@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1;"/>
+<title>Ingreso de Iniciativa</title>
+
+<link rel="stylesheet" href="../SiteAssets/css/wfpmo-formulario.css" />
+<link rel="stylesheet" href="../SiteAssets/css/wfpmo-estilo.css" />
+
+<link rel="stylesheet" href="../SiteAssets/css/jquery-ui.css" />
+<!--<link rel="stylesheet" href="/demos/style.css" />-->
+
+
+<script type="text/javascript" src="../js/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.js"></script>
+<script type="text/javascript" src="../js/jquery.SPServices-0.7.2.min.js"></script>  
+<script type="text/javascript" src="../js/jquery.SPWidgets.js"></script>
+<script type="text/javascript"  src="../js/moment.js"></script>
+<script type="text/javascript" src="/_layouts/sp.init.js"></script>
+<script type="text/javascript" src="/_layouts/1033/init.js"></script>
+<script type="text/javascript" src="/_layouts/MicrosoftAjax.js"></script>
+<script type="text/javascript" src="/_layouts/sp.core.js"></script>
+<script type="text/javascript" src="/_layouts/sp.runtime.js"></script>
+<script type="text/javascript" src="/_layouts/sp.js"></script>
+<script type="text/javascript" src="/_layouts/SP.UI.Dialog.js"></script>
+<script type="text/javascript" src="/_layouts/ScriptResx.ashx?name=sp.res&culture=en-us"></script>
+
+<script type="text/javascript" src="../SiteAssets/js/wfpmo-pantalla-comprobacion.js"></script>
+<script type="text/javascript" src="../SiteAssets/js/wfpmo-templateId.js"></script>
+<link rel="stylesheet" type="text/css" href="/_layouts/1033/styles/Themable/corev4.css" />
+
+<!-- [if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:_dlc_DocId msdt:dt="string">KMPJPZYYTC4J-1100042023-11</mso:_dlc_DocId>
+<mso:_dlc_DocIdItemGuid msdt:dt="string">c83d716c-4537-41cc-8e82-0042265c0c21</mso:_dlc_DocIdItemGuid>
+<mso:_dlc_DocIdUrl msdt:dt="string">http://qashpcorpapp.codelco.cl/sites/PGTI/areas/SSI/catalogo_aplicaciones/RegistroIniciativas/desa/_layouts/DocIdRedir.aspx?ID=KMPJPZYYTC4J-1100042023-11, KMPJPZYYTC4J-1100042023-11</mso:_dlc_DocIdUrl>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+	<body>
+		<div id="cargando" style=" background-color: rgba(128,128,128,0.1); z-index: 9999999; position: fixed; width: 100%; height: 100%; padding: 1px; top:0;left: 0; display:none" >
+			<div style="text-align: center;  margin: auto;  position: absolute;  top: 35%; left: 40%;">
+				<img src="../SiteAssets/img/spinner.gif" style="width:60%;"/>
+			</div>
+		</div>
+		<div style="width:450px; padding-left:30px; ">
+			<div style="width:100%;height:15px;border-top:1px #e6e6e6 solid;float:left;">
+			<!--<hr style="width:100%;border:1px;border-color:silver;background-color:#e6e6e6;height:0.5px;"/>-->
+			</div>
+		
+		  	<table class="gridtable"  width="100%">
+		  		<tr>
+		  			<td style="width:40%;">Tipo Área</td>
+		  			<td style="width:60%;"><select style="width:70%;" id="sltTipoArea"></select></td>
+		  		</tr>
+		
+		  		<tr>
+		  			<td style="width:40%;">Área Especialista</td>
+		  			<td style="width:60%;"><select style="width:70%;" id="sltAreaEspecialista" ></select></td>
+		  		</tr>
+		  	</table>
+		</div>
+		
+		<!--<div  style="padding: 15px; width: 450px;margin-left: 15px;text-align:right;margin-top:8px;border-top:1px #dddddd solid;">-->
+		<div  style="padding: 15px;margin-left: 15px;text-align:center;margin-top:8px;border-top:1px #dddddd solid;">
+				<input class="boton-gris" id="btnAprobar"  type="button"  style="width:25%" onclick="Aprueba();" value="Aprobar"/>  
+				<input class="boton-gris" id="btnCancelar" type="button"  style="width:25%" onclick="Cancelar();" value="Cancelar"/>
+		</div>
+	
+</body>
+</html>
